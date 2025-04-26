@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+            border-bottom: 2px solid #ff6b6b;
+        }
+
+        .content {
+            margin-top: 100px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-7 {
+            width: 70%;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        a.visit-btn {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        a.visit-btn:hover {
+            background-color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>欢迎访问我的主页！</h1>
+        
+        <div class="row">
+            <div class="col-3">
+                <div class="card profile">
+                    <img src="https://cn.bing.com/images/search?view=detailV2&ccid=I5fcugrV&id=C71BEA8351E5DBD7B0D78D017BEA0F53072E76F2&thid=OIP.I5fcugrVrWFIFeOVkrAdqgHaHa&mediaurl=https%3a%2f%2fwww.keaitupian.cn%2fcjpic%2ffrombd%2f1%2f253%2f3205809338%2f853439236.jpg&exph=500&expw=500&q=%e5%a4%b4%e5%83%8f%e7%ae%80%e5%8d%95%e6%b0%94%e8%b4%a8&simid=608031108071828183&FORM=IRPRST&ck=25913291B3025C4B4143494FC51EED26&selectedIndex=132&itb=0" alt="太帅了打不开">
+                    <h2>阿雨</h2>
+                    <p>一个默默努力的男孩</p>
+                    <a href="#" class="visit-btn">联系我</a>
+                </div>
+            </div>
+
+            <div class="col-7">
+                <div class="card content">
+                    <h2>要每天开开心心噢！</h2>
+                    <ul>
+                        <li><strong>每一次日出都是新的开始，每个清晨都值得温柔以待。</strong></li>
+                        <li>每一次清晨醒来，都是一次新的开始，拥抱每一天的阳光，让昨日的忧愁随风消散。</li>
+                        <li>阳光照进窗户，照亮了角落的尘埃，也点亮了心中的梦想，勇敢追逐，不问归期。</li>
+                    </ul>
+
+                    <div class="card">
+                        <h3>我的生活</h3>
+                        <p>一个喜欢听歌，看书，刷视频，简简单单的普通男孩</p>
+                        <p>偶尔疯癫，基本平静，爱笑的男孩子运气不会太差！</p>
+                        <p>未来无法预料，别吝啬爱与生活！！</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>特色推荐</h3>
+                        <p>好好生活，你一直都不是一个人</p>
+                        <ul>
+                            <li>无聊可以找我玩，虽然我不爱说话，哈哈哈</li>
+                            <li>但是还有风景啊，游戏啊，小说，音乐！还有那么多东西等你呢</li>
+                            <li>最后的最后，如果没人爱你，还有我在，<b>我爱你</b>，世界那么大总要去看看的吧</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 简单的交互效果
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                this.style.borderBottom = '2px solid #ff6b6b';
+                this.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
+            });
+
+            link.addEventListener('mouseout', function() {
+                this.style.borderBottom = '';
+                this.style.boxShadow = '';
+            });
+        });
+
+        document.querySelector('.visit-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('感谢您的联系！我会尽快回复您。');
+        });
+    </script>
+</body>
+</html>
+</think>
